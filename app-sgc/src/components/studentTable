@@ -1,0 +1,29 @@
+function StudentTable({students, onEdit, onDelete}) {
+    return (
+        <table className="w-full bg-white rounded-xl shadow-sm overflow-hidden">
+            <thead className="bg-slate-100">
+                <tr>
+                    <th className="text-left p-4">Nombre</th>
+                    <th className="text-left p-4">Apellido</th>
+                    <th className="text-left p-4">Correo</th>
+                    <th className="text-left p-4">Celular</th>
+                    <th className="text-center p-4">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {students.map((student, index) => (
+                    <tr key={index} className="border-b hover:bg-gray-50">
+                        <td className="p-4">{student.nombre}</td>
+                        <td className="p-4">{student.apellido}</td>
+                        <td className="p-4">{student.correo}</td>
+                        <td className="p-4">{student.celular}</td>
+                        <td className="p-4 text-center">
+                           
+                    </tr>
+                ))}
+            </tbody>
+        </table>
+    );
+}
+
+export default StudentTable;
